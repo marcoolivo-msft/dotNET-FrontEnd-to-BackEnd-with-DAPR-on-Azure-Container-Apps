@@ -50,6 +50,11 @@ jobs:
       with:
         inlineScript: >
           echo "Creating resources"
+          
+          pwd
+          ls -laR
+          echo "sopra:"
+          ls -laR ..
           az deployment group create --resource-group ${{ env.RESOURCE_GROUP_NAME }} --template-file './Azure/main.bicep' --debug
 
   build:
